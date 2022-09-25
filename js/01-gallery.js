@@ -48,5 +48,3 @@ function onGalleryItemsClick(event) {
     }
   });
 }
-
-console.log(galleryItems);
