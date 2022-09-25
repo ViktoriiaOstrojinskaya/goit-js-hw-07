@@ -1,8 +1,8 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-const gallery = document.querySelector('.gallery');
+const galleryCards = document.querySelector('.gallery');
 const galleryImagesItems = createImagesMarkup(galleryItems);
-gallery.insertAdjacentHTML('beforeend', galleryImagesItems);
+galleryCards.insertAdjacentHTML('beforeend', galleryImagesItems);
 
 function createImagesMarkup(images) {
   return images
@@ -23,7 +23,7 @@ function createImagesMarkup(images) {
     .join('');
 }
 
-gallery.addEventListener('click', onGalleryItemsClick);
+galleryCards.addEventListener('click', onGalleryItemsClick);
 
 function onGalleryItemsClick(event) {
   event.preventDefault();
@@ -37,7 +37,6 @@ function onGalleryItemsClick(event) {
     `
       <div class="modal">
           <img src="${activeImages.dataset.source}"/>
-          
       </div>
     `
   );
